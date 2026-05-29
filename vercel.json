@@ -1,0 +1,19 @@
+{
+    "framework": "vite",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "routes": [
+        {
+            "src": "/_assets/(.*)",
+            "dest": "/_assets/$1"
+        },
+        {
+            "src": "/_build/(.*)",
+            "dest": "/_build/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ]
+}
