@@ -1,15 +1,10 @@
 {
     "framework": "vite",
     "buildCommand": "npm run build",
-    "outputDirectory": "dist",
+    "outputDirectory": "dist/client",
     "routes": [
         {
-            "src": "/_assets/(.*)",
-            "dest": "/_assets/$1"
-        },
-        {
-            "src": "/_build/(.*)",
-            "dest": "/_build/$1"
+            "handle": "filesystem"
         },
         {
             "src": "/(.*)",
