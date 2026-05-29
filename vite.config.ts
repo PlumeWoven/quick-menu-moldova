@@ -1,13 +1,10 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from '@lovable.dev/vite-tanstack-config';
 
 export default defineConfig({
+  cloudflare: false,
   tanstackStart: {
-    server: { entry: "server" },
-    ssr: false,  // 👈 disable SSR → static SPA
-  },
-  vite: {
-    optimizeDeps: {
-      exclude: ["zod"],
+    server: {
+      preset: 'vercel',
     },
   },
 });
